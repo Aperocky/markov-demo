@@ -1,0 +1,5 @@
+**/*.swp
+assets/script.min.js
+assets/script.js
+package-lock.json
+node_modules

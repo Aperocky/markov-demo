@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rocky Li">
+
+    <title>Markov BS Generator</title>
+
+    <!-- Bootstrap core -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        body {
+            background: #ddd;
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+        footer {
+            min-height: 10vh;
+        }
+        button {
+            display: inline-block;
+            margin: 0px 10px;
+        }
+        select {
+            margin: 10px;
+        }
+        .filler {
+            min-height: 5vh;
+        }
+        #seed-text {
+            height: 50vh;
+            min-width: 90%;
+            overflow-y: scroll;
+            font-family: monospace;
+        }
+        #npm-package {
+            padding: 20px;
+            border-radius: 10px;
+            background: #ccc;
+        }
+        #output-text {
+            height: 40vh;
+        }
+        #outbox {
+            width: 90%;
+            height: 90%;
+            border-radius: 10px;
+        }
+        #main-container {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container" id="main-container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="filler"></div>
+            <small class="text-muted font-italic"> Input Seed Text Here </small>
+            <div class="row" id="input-text">
+                <textarea id="seed-text"></textarea>
+            </div>
+            <div class="filler"></div>
+            <div class="row" id="output-text">
+                <div id="outbox">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" id="side">
+            <div class="filler"></div>
+            <div class="filler"></div>
+            <div class="row" id="npm-package">
+                <code>$ npm i weighted-markov-chain</code>
+            </div>
+            <div class="filler"></div>
+            <div class="row" id="input-row">
+            </div>
+            <div class="filler"></div>
+            <div class="row" id="reset-row">
+            </div>
+            <div class="filler"></div>
+            <div class="row">
+                <button class="btn btn-primary" id="main-button">GENERATE</button>
+            </div>
+            <div class="filler"></div>
+            <p class="lead"> select example seed text </p>
+            <div class="row">
+                <select name="select-existing" class="form-select" id="select-existing">
+                    <option value="none"> None </option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyleft &copy; Rocky Li</p>
+    </div>
+</footer>
+</body>
+    <script type="module" src="script.js"></script>
+</html>

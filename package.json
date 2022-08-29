@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "./compile.sh"
+  },
+  "dependencies": {
+    "weighted-markov-generator": "^0.2.1"
+  }
+}
