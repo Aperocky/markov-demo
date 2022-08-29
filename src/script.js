@@ -98,7 +98,6 @@ function outputValues() {
     let generator = new WeightedMarkovGenerator(params["seedLength"]);
     params["seedText"].split(/\r?\n/).forEach(text => {
         text = text.trim();
-        console.log(`Seeding with ${text}`);
         generator.seedText(text);
     });
     try {
@@ -148,6 +147,9 @@ function buildSelect() {
 
 function loadText(path) {
     let seedTextArea = document.getElementById("seed-text");
+    if (!(location.hostname == "0.0.0.0")) {
+        path = `/markov${path}`
+    }
     let request = new XMLHttpRequest();
     request.onload = function () {
         let result = this.response;
